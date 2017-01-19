@@ -1,3 +1,8 @@
+- name: Configure provider
+  connection: local
+  provider:
+      host: "{{ inventory_hostname }}"
+      transport: cli
 
 - hosts: all
 - name:  Start Run adhoc commands
@@ -5,4 +10,5 @@
    - name: Loop through commands
      ios_command:
         commands:  "{{ item }}"
+        provider: "{{ provider }}"
      with_items: "{{ commands }}"
