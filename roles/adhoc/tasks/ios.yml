@@ -1,0 +1,9 @@
+---
+hosts: all
+
+tasks:
+
+  - name:  Run adhoc commands
+      ios_command:
+        commands:  "{{ item }}"
+      with_items: "{{ commands }}"
