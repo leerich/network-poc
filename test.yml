@@ -4,7 +4,6 @@
       host: "{{ inventory_hostname }}"
       transport: cli
 
-- hosts: all
 - name:  Start Run adhoc commands
   tasks:
    - name: Loop through commands
