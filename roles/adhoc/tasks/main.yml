@@ -4,7 +4,7 @@
     backup_path: "{{ playbook_dir }}/backup"
     
 - name: set backup_file fact
-   set_fact:
+  set_fact:
     backup_file: "{{ backup_path }}/{{ inventory_hostname }}/cmd_output"
     
 - name: create backup paths
