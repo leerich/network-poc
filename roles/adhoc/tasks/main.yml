@@ -31,15 +31,15 @@
   with_items: "{{ commands }}"
   register: cmd_output
   
-#- name: display output
-#  debug: 
-#    var: cmd_output
+- name: display raw output
+  debug: 
+    var: cmd_output
  
 - name: Cleanup output
   set_fact:
     nice_output:  "{{ cmd_output | to_nice_json }}"
     
-- name: display output
+- name: display clean output
   debug: 
     var: nice_output
     
