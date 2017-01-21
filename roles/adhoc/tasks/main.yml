@@ -33,7 +33,8 @@
   
 - name: display raw output
   debug: 
-    var: "{{ cmd_output | json_query(stdout) }}"
+    var: item
+  with_items: "{{ cmd_output | json_query(stdout) }}"
  
 - name: Cleanup output
   set_fact:
