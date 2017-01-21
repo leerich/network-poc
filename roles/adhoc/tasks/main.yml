@@ -1,7 +1,7 @@
 --- 
 - 
   ios_command: 
-    commands: "{{ item.command }}"
+    commands: "{{ item.command_list }}"
     #commands:
     #  - show version
    
