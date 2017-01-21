@@ -1,7 +1,9 @@
 --- 
 - 
   ios_command: 
-    commands: "{{ item }}"
+    #commands: "{{ item }}"
+    commands:
+      - show version
     #ansible_connection: network_cli
     provider: "{{ provider }}"
     wait_for: result[0] contains IOS
