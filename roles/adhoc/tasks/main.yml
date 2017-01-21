@@ -31,11 +31,11 @@
   with_items: "{{ commands }}"
   register: cmd_output
   
-- debug:  var=cmd_output.stdout_lines
+#- debug:  var=cmd_output.stdout_lines
 
 - name: display raw output
   debug: 
-    msg: "{{ item.stdout_lines }}"
+    msg: "{{ item.stdout_lines | to_nice|json }}"
   with_items: "{{ cmd_output.results }}"
   when:  item.stdout_lines != 0
  
