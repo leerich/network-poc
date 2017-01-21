@@ -2,7 +2,11 @@
 - name: set backup_path fact
   set_fact:
     backup_path: "{{ playbook_dir }}/backup"
-
+    
+- name: set backup_file fact
+   set_fact:
+    backup_file: "{{ backup_path }}/{{ inventory_hostname }}/cmd_output"
+    
 - name: create backup paths
   file:
     path: "{{ backup_path }}"
@@ -31,9 +35,6 @@
   #debug: 
     #var: cmd_output
  
- - name: set backup_file fact
-   set_fact:
-    backup_file: "{{ backup_path }}/{{ inventory_hostname }}/cmd_output"
 
 - name: write backup to file
   copy:
