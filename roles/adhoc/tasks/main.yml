@@ -35,7 +35,7 @@
 
 - name: display raw output
   debug: 
-    msg: "{{ item.stdout_lines | to_nice|json }}"
+    msg: "{{ item.stdout_lines | to_nice_json }}"
   with_items: "{{ cmd_output.results }}"
   when:  item.stdout_lines != 0
  
