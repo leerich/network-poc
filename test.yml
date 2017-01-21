@@ -1,13 +1,8 @@
-- name: Configure provider
+---
+- name: Configure devices
+  hosts: all
   connection: local
-  provider:
-      host: "{{ inventory_hostname }}"
-      transport: cli
-
-- name:  Start Run adhoc commands
-  tasks:
-   - name: Loop through commands
-     ios_command:
-        commands:  "{{ item }}"
-        provider: "{{ provider }}"
-     with_items: "{{ commands }}"
+ 
+  roles:
+    - name: run adhoc command
+      role: adhoc
