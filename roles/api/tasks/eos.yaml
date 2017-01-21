@@ -1,0 +1,8 @@
+---
+- name: configure eapi
+  eos_eapi:
+    http: yes
+    http_port: 80
+    state: started
+    provider: "{{ cli }}"
+
