@@ -1,9 +1,9 @@
 --- 
 - 
   ios_command: 
-    commands: "{{ item.command_list }}"
-    #commands:
-    #  - show version
+    #commands: "{{ item.command_list }}"
+    commands:
+      - "{{ item }}"
    
     provider: "{{ provider }}"
     #wait_for: result[0] contains IOS
