@@ -31,6 +31,8 @@
   with_items: "{{ commands }}"
   register: cmd_output
   
+- debug:  var=cmd_output.stdout_lines
+
 - name: display raw output
   debug: 
     msg: "{{ item.stdout_lines }}"
