@@ -8,9 +8,9 @@
     provider: "{{ provider }}"
     wait_for: result[0] contains IOS
   name: "Run adhoc commands"
-  with_items: "{{ commands }}"
-  register: output
+  #with_items: "{{ commands }}"
+  register: version
   
 - name: display output
   debug: 
-    var: output.stdout
+    var: version.stdout
