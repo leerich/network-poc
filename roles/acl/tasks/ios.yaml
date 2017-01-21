@@ -1,0 +1,10 @@
+---
+- name: configure acl entries
+  ios_config:
+    lines: "{{ acl_entries.ios }}"
+    parents: "ip access-list extended {{ acl_name }}"
+    before: "no ip access-list extended {{ acl_name }}"
+    match: exact
+    replace: block
+    provider: "{{ provider }}"
+  when: acl_entries.ios is defined
