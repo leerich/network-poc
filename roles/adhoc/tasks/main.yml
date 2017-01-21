@@ -5,7 +5,7 @@
     
 - name: set backup_file fact
   set_fact:
-    backup_file: "{{ backup_path }}/{{ inventory_hostname }}/cmd_output"
+    backup_file: "{{ backup_path }}/{{ inventory_hostname }}/command_output"
     
 - name: create backup paths
   file:
@@ -38,7 +38,7 @@
 
 - name: write backup to file
   copy:
-    content: "{{ cmd_output.stdout }}"
+    content: "{{ cmd_output }}"
     dest: "{{ backup_file }}"
  
 #- name: Save full data to file
