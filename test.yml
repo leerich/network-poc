@@ -2,6 +2,7 @@
 - 
   connection: local
   hosts: all
+  gather_facts: no
   name: "Configure devices"
   roles: 
     - 
