@@ -26,7 +26,7 @@
       "{{ item.command }}"
    
     provider: "{{ provider }}"
-    #wait_for: result[0] contains IOS
+    wait_for: result[0] contains stdout
   name: "Run adhoc commands"
   with_items: "{{ commands }}"
   register: cmd_output
