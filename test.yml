@@ -1,8 +1,9 @@
----
-- name: Configure devices
-  hosts: all
+--- 
+- 
   connection: local
- 
-  roles:
-    - name: run adhoc command
+  hosts: all
+  name: "Configure devices"
+  roles: 
+    - 
+      name: "run adhoc command"
       role: adhoc
