@@ -1,6 +1,6 @@
----
-
-- name:  Run adhoc commands
-  ios_command:
-     commands:  "{{ item }}"
+--- 
+- 
+  ios_command: 
+    commands: "{{ item }}"
+  name: "Run adhoc commands"
   with_items: "{{ commands }}"
