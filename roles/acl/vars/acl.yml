@@ -11,9 +11,9 @@ acl_entries:
     - 60 permit ip 172.31.15.0/24 any
 
   ios:
-    - no permit ip 172.31.10.0 0.0.0.255 any
-    - no permit ip 172.31.11.0 0.0.0.255 any
-    - no permit ip 172.31.12.0 0.0.0.255 any
-    - no permit ip 172.31.13.0 0.0.0.255 any
-    - no permit ip 172.31.14.0 0.0.0.255 any
-    - no permit ip 172.31.15.0 0.0.0.255 any
+    - permit ip 172.31.10.0 0.0.0.255 any
+    - permit ip 172.31.11.0 0.0.0.255 any
+    - permit ip 172.31.12.0 0.0.0.255 any
+    - permit ip 172.31.13.0 0.0.0.255 any
+    - permit ip 172.31.14.0 0.0.0.255 any
+    - permit ip 172.31.15.0 0.0.0.255 any
