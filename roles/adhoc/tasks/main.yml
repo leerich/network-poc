@@ -34,7 +34,7 @@
  
  - name: set backup_file fact
   set_fact:
-    backup_file: "{{ backup_path }}/{{ inventory_hostname }}/running-config"
+    backup_file: "{{ backup_path }}/{{ inventory_hostname }}/cmd_output"
 
 - name: write backup to file
   copy:
