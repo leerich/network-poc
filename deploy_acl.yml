@@ -7,4 +7,4 @@
   roles: 
     - 
       name: "Configure Device ACL's"
-      role: adhoc
+      role: acl
