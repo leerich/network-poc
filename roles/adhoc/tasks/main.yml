@@ -33,7 +33,7 @@
   
 - name: display raw output
   debug: 
-    var: "{{ cmd_output | type_debug }}"
+    var: {{ cmd_output | type_debug }}
  
 - name: Cleanup output
   set_fact:
