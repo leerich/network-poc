@@ -33,7 +33,7 @@
   
 - name: display raw output
   debug: 
-    msg: "{{ item }}"
+    msg: "{{ item.stdout }}"
   with_items: "{{ cmd_output.results }}"
  
 - name: Cleanup output
