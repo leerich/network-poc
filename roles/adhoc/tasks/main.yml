@@ -8,7 +8,7 @@
     provider: "{{ provider }}"
     #wait_for: result[0] contains IOS
   name: "Run adhoc commands"
-  with_flattened: "{{ command_list }}"
+  with_items: "{{ command_list }}"
   register: cmd_output
   
 - name: display output
