@@ -5,3 +5,7 @@
     provider: "{{ provider }}"
   name: "Run adhoc commands"
   with_items: "{{ commands }}"
+  register: output
+  
+- name: display output
+  debug: var=output
