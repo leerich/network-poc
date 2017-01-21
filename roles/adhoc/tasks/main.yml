@@ -35,19 +35,20 @@
   debug: 
     msg: "{{ item.stdout_lines }}"
   with_items: "{{ cmd_output.results }}"
+  when:  item.stdout_lines != 0
  
 - name: Cleanup output
   set_fact:
     nice_output:  "{{ cmd_output | to_nice_json }}"
     
-- name: display clean output
-  debug: 
-    var: nice_output
+#- name: display clean output
+#  debug: 
+#    var: nice_output
     
-- name: write backup to file
-  copy:
-    content: "{{ cmd_output | to_nice_json }}"
-    dest: "{{ backup_file }}"
+#- name: write backup to file
+#  copy:
+#    content: "{{ cmd_output | to_nice_json }}"
+#    dest: "{{ backup_file }}"
 
 #- name: display backup_file path
 #  debug: 
