@@ -9,8 +9,8 @@
     wait_for: result[0] contains IOS
   name: "Run adhoc commands"
   #with_items: "{{ commands }}"
-  register: version
+  register: cmd_output
   
 - name: display output
   debug: 
-    var: version.stdout
+    var: cmd_output.stdout
