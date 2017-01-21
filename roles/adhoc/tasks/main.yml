@@ -4,11 +4,11 @@
     commands: "{{ item }}"
     #commands:
     #  - show version
-    #ansible_connection: network_cli
+   
     provider: "{{ provider }}"
-    wait_for: result[0] contains IOS
+    #wait_for: result[0] contains IOS
   name: "Run adhoc commands"
-  with_items: "{{ commands }}"
+  with_items: "{{ command_list }}"
   register: cmd_output
   
 - name: display output
