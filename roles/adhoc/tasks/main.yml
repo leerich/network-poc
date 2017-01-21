@@ -16,8 +16,7 @@
     state: directory
   delegate_to: localhost
   
-- 
-  ios_command: 
+- ios_command: 
     #commands: "{{ item.command_list }}"
     commands:
       "{{ item.command }}"
@@ -33,7 +32,7 @@
     #var: cmd_output
  
  - name: set backup_file fact
-  set_fact:
+   set_fact:
     backup_file: "{{ backup_path }}/{{ inventory_hostname }}/cmd_output"
 
 - name: write backup to file
