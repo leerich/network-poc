@@ -1,8 +1,6 @@
 ---
 
 - name:  Run adhoc commands
-  hosts: all
-  tasks:
-   - ios_command:
-        commands:  "{{ item }}"
-     with_items: "{{ commands }}"
+  ios_command:
+     commands:  "{{ item }}"
+  with_items: "{{ commands }}"
