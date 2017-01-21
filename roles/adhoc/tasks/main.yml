@@ -37,7 +37,7 @@
  
 - name: Cleanup output
   set_fact:
-    nice_output:  "{{ cmd_output | to_nice_json | json_query('stdout_lines') }}"
+    nice_output:  "{{ cmd_output | to_nice_json }}"
     
 - name: display output
   debug: 
