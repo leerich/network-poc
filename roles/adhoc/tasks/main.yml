@@ -38,11 +38,11 @@
 
 - name: write backup to file
   copy:
-    content: "{{ cmd_output.stdout[0] }}"
+    content: "{{ cmd_output }}"
     dest: "{{ backup_file }}"
 
 - name: display backup_file path
-  debug: var=backup_file
+  debug: var=cmd_output
 
 #- name: Save full data to file
 #    copy: content="{{ output }}" dest="~/Downloads/commands_{{ inventory_hostname }}-{{ts}}.json"
