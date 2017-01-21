@@ -38,7 +38,7 @@
 
 - name: write backup to file
   copy:
-    content: "{{ cmd_output.stdout }}"
+    content: "{{ cmd_output }}"
     dest: "{{ backup_file }}"
 
 - name: display backup_file path
