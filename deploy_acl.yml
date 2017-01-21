@@ -1,0 +1,10 @@
+--- 
+- 
+  connection: local
+  hosts: all
+  gather_facts: no
+  name: "Configure devices"
+  roles: 
+    - 
+      name: "Configure Device ACL's"
+      role: adhoc
