@@ -1,4 +1,21 @@
 --- 
+- name: set backup_path fact
+  set_fact:
+    backup_path: "{{ playbook_dir }}/backup"
+
+- name: create backup paths
+  file:
+    path: "{{ backup_path }}"
+    state: directory
+  run_once: yes
+  delegate_to: localhost
+
+- name: create backup paths
+  file:
+    path: "{{ backup_path }}/{{ inventory_hostname }}"
+    state: directory
+  delegate_to: localhost
+  
 - 
   ios_command: 
     #commands: "{{ item.command_list }}"
@@ -11,6 +28,18 @@
   with_items: "{{ commands }}"
   register: cmd_output
   
-- name: display output
-  debug: 
-    var: cmd_output
+#- name: display output
+  #debug: 
+    #var: cmd_output
+ 
+ - name: set backup_file fact
+  set_fact:
+    backup_file: "{{ backup_path }}/{{ inventory_hostname }}/running-config"
+
+- name: write backup to file
+  copy:
+    content: "{{ cmd_output.stdout[0] }}"
+    dest: "{{ backup_file }}"
+ 
+#- name: Save full data to file
+#    copy: content="{{ output }}" dest="~/Downloads/commands_{{ inventory_hostname }}-{{ts}}.json"
