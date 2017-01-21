@@ -8,4 +8,5 @@
   register: output
   
 - name: display output
-  debug: var=output.stdout_lines
+  debug: 
+    var: output
