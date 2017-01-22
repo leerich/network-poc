@@ -1,0 +1,10 @@
+---
+- name: import configuration values
+  include_vars: "{{ role_path }}/vars/acl.yaml"
+
+- name: run device specific tasks
+  include: "{{ item }}"
+  with_first_found:
+    - files: "{{ device_os }}.yaml"
+      skip: true
+      paths: tasks
