@@ -10,4 +10,4 @@
   when: acl_entries.ios is defined
   register: stdoutput
   
- - debug: var=stdoutput
+- debug: var=stdoutput
