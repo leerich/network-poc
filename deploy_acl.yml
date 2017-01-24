@@ -2,12 +2,11 @@
 - 
   connection: local
   hosts: all
-  strategy: debug
-  gather_facts: no
   name: "Configure devices"
   roles: 
-    - 
-      name: "Configure Device ACL's"
+  
+    - name: "Configure Device ACL's"
       role: acl
+      
     - name: backup existing config to local host
       role: backup
