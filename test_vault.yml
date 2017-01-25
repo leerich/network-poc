@@ -1,7 +1,8 @@
 - connection: local
   hosts: all
-  gather_facts: no
-
+ 
   tasks:
+  - name: Hello World!
+    shell: echo "Hi! Tower is working"
   - name Testing vault secrets
     debug: var="{{ vault_secret }}"
