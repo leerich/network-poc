@@ -2,8 +2,8 @@
 - name: Hello World!
   hosts: all
  
-   tasks:
+  tasks:
   
-   - name: Print Hello World!
-     shell: echo "{{ secret }}"
-     debug: var="{{ secret }}"
+  - name: Print Hello World!
+    shell: echo "{{ secret }}"
+    debug: var="{{ secret }}"
