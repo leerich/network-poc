@@ -2,8 +2,8 @@
 - name: Hello World!
   hosts: all
   vars_files:
-    - vars.yml
-    - vault.yml
+    - group_vars/vars.yml
+    - group_vars/vault.yml
  
   tasks:
   
