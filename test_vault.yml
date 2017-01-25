@@ -6,4 +6,4 @@
   
   - name: Print Hello World!
     shell: echo "Hello World!"
-    #debug: var="{{ secret }}"
+    debug: var="{{ secret }}"
