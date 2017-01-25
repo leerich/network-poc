@@ -1,3 +1,5 @@
+- include_vars: vault.yml
+
 - name: Hello World!
   hosts: all
  
