@@ -4,7 +4,7 @@
   hosts: all
  
   tasks:
-  - name: Print Hello World!
+    - name: Print Hello World!
     shell: echo "{{ secret }}"
   #- name Testing vault secrets
-    debug: var="{{ secret }}"
+      debug: var="{{ secret }}"
