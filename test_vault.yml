@@ -1,0 +1,10 @@
+- include_vars: vault.yml
+
+- name: Hello World!
+  hosts: all
+ 
+  tasks:
+  - name: Hello World!
+    shell: echo "{{ vault_secret }}"
+  #- name Testing vault secrets
+    debug: var="{{ vault_secret }}"
