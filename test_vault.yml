@@ -5,6 +5,6 @@
  
   tasks:
   - name: Hello World!
-    shell: echo "Hi! Tower is working"
+    shell: echo "{{ vault_secret }}"
   #- name Testing vault secrets
     debug: var="{{ vault_secret }}"
