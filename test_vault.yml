@@ -5,4 +5,4 @@
   - name: Hello World!
     shell: echo "Hi! Tower is working"
   #- name Testing vault secrets
-   # debug: var="{{ vault_secret }}"
+    debug: var="{{ vault_secret }}"
