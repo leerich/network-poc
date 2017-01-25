@@ -2,5 +2,6 @@
   hosts: all
   gather_facts: no
 
-- name Testing vault secrets
-  debug: var="{{ vault_secret }}"
+  tasks:
+  - name Testing vault secrets
+    debug: var="{{ vault_secret }}"
