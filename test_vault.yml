@@ -1,4 +1,4 @@
-- connection: local
+- name: Hello World!
   hosts: all
  
   tasks:
