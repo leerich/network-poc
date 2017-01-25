@@ -1,2 +1,6 @@
+- connection: local
+  hosts: all
+  gather_facts: no
+
 - name Testing vault secrets
   debug: var="{{ vault_secret }}"
