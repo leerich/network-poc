@@ -8,5 +8,5 @@
   tasks:
   
   - name: Print Hello World!
-    shell: echo "{{ secret }}"
+    shell: echo "{{ vault_secret }}"
     #debug: var="{{ secret }}"
