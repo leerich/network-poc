@@ -1,0 +1,2 @@
+- name Testing vault secrets
+  debug: var="{{ vault_secret }}"
