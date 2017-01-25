@@ -1,6 +1,9 @@
 ---
 - name: Hello World!
   hosts: all
+  var_files:
+    - vars.yml
+    - vault.yml
  
   tasks:
   
