@@ -5,5 +5,5 @@
   tasks:
   
   - name: Print Hello World!
-    shell: echo "{{ secret }}"
-    debug: var="{{ secret }}"
+    shell: echo "Hello World!"
+    #debug: var="{{ secret }}"
