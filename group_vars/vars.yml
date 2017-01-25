@@ -1,2 +1,3 @@
 ---
-secret: "{{ vault_secret }}"
+#secret: "{{ vault_secret }}"
+secret: this is my secret
