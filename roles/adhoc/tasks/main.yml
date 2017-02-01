@@ -46,10 +46,10 @@
 #  debug: 
 #    var: nice_output
     
-#- name: write backup to file
-#  copy:
-#    content: "{{ cmd_output | to_nice_json }}"
-#    dest: "{{ backup_file }}"
+- name: write backup to file
+  copy:
+    content: "{{ cmd_output | to_nice_json }}"
+    dest: "{{ backup_file }}"
 
 #- name: display backup_file path
 #  debug: 
