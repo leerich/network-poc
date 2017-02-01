@@ -51,9 +51,9 @@
     content: "{{ cmd_output | to_nice_json }}"
     dest: "{{ backup_file }}"
 
-#- name: display backup_file path
-#  debug: 
-#    var:  "{{ cmd_output.stdout_lines }}"
+- name: display backup_file path
+  debug: 
+    var:  "{{ cmd_output.stdout_lines }}"
 
 #- name: Save full data to file
 #    copy: content="{{ output }}" dest="~/Downloads/commands_{{ inventory_hostname }}-{{ts}}.json"
