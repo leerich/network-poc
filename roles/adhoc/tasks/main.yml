@@ -53,7 +53,7 @@
 
 - name: display backup_file path
   debug: 
-    var:  "{{ cmd_output.stdout_lines }}"
+    var:  "{{ backup_file }}"
 
 #- name: Save full data to file
 #    copy: content="{{ output }}" dest="~/Downloads/commands_{{ inventory_hostname }}-{{ts}}.json"
