@@ -1,6 +1,5 @@
 ---
 
 - name: template building
-  hosts: all
   # Create config files
   template: src=templates/routers.j2 dest="{{ playbook_dir }}/configs/{{ inventory_hostname }}.cfg"
