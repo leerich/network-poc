@@ -1,0 +1,9 @@
+---
+- name: Network Device Templating
+  hosts: all
+  connection: local
+  
+  roles:
+    - name: Start Templating Devices
+      role: config
+
