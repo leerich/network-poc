@@ -15,5 +15,5 @@
 #      - show ip bgp neighbor '{{ bgp_neig2 }}' received-routes
 #      - show ip bg
       - show version
-      #- show log
+      - show run
     provider: '{{ cli }}'
