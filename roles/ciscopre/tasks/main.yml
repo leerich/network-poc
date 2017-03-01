@@ -16,4 +16,7 @@
 #      - show ip bg
       - show version
       - show run
+    register: log_out
     provider: '{{ cli }}'
+
+- debug: msg="{{ log_out }}"
