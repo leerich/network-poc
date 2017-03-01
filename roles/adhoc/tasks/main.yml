@@ -1,59 +1,8 @@
---- 
-- name: set backup_path fact
-  set_fact:
-    backup_path: "{{ playbook_dir }}/backup"
-    
-- name: set backup_file fact
-  set_fact:
-    backup_file: "{{ backup_path }}/{{ inventory_hostname }}/command_output"
-    
-- name: create backup paths
-  file:
-    path: "{{ backup_path }}"
-    state: directory
-  run_once: yes
-  delegate_to: localhost
+---
 
-- name: create backup paths
-  file:
-    path: "{{ backup_path }}/{{ inventory_hostname }}"
-    state: directory
-  delegate_to: localhost
-  
-- ios_command: 
-    #commands: "{{ item.command_list }}"
-    commands:
-      "{{ item }}"   
-    provider: "{{ provider }}"
-    #wait_for: result[0] contains stdout
-  name: "Run adhoc commands"
-  with_items: "{{ commands }}"
-  register: cmd_output
-  
-#- debug:  var=cmd_output.stdout_lines
-
-- name: display raw output
-  debug: 
-    msg: "{{ item.stdout_lines | to_nice_json }}"
-  with_items: "{{ cmd_output.results }}"
-  when:  item.stdout_lines != 0
- 
-- name: Cleanup output
-  set_fact:
-    nice_output:  "{{ cmd_output | to_nice_json }}"
-    
-#- name: display clean output
-#  debug: 
-#    var: nice_output
-    
-- name: write backup to file
-  copy:
-    content: "{{ cmd_output | to_nice_json }}"
-    dest: "{{ backup_file }}"
-
-#- name: display backup_file path
-#  debug: 
-#    var:  "{{ backup_file }}"
-
-#- name: Save full data to file
-#    copy: content="{{ output }}" dest="~/Downloads/commands_{{ inventory_hostname }}-{{ts}}.json"
+- name:  Run adhoc commands
+  hosts: all
+  tasks:
+   - ios_command:
+        commands:  "{{ item }}"
+     with_items: "{{ commands }}"
