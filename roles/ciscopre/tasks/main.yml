@@ -6,7 +6,7 @@
       - show ip interface brief
       - show ip route summary
       - show ip eigrp neighbor
-#      - show ip bgp summary
+      - show ip bgp summary
 #      - show ip bgp neighbor {{ bgp_neig }} advertised-routes
 #      - show ip bgp neighbor {{ bgp_neig }} received-routes
 #      - show ip bgp neighbor '{{ bgp_neig1 }}' advertised-routes
@@ -17,3 +17,5 @@
       - show run
       - show log
     provider: '{{ cli }}'
+    authorize: yes
+    aut_pass: '{{ cisco_auth }}'
