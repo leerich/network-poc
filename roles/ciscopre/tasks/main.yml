@@ -17,7 +17,7 @@
       - show version
       - show run
     provider: '{{ cli }}'
-    register: log_out
+    #register: log_out
 
-- debug:
-    msg: "{{ log_out }}"
+#- debug:
+#    msg: "{{ log_out }}"
