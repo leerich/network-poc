@@ -19,4 +19,5 @@
     provider: '{{ cli }}'
     register: log_out
 
-- debug: msg="{{ log_out }}"
+- debug:
+    msg: "{{ log_out }}"
