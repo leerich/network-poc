@@ -1,0 +1,4 @@
+---
+- name: Show prechange status
+  nxos_config:
+    commands:
