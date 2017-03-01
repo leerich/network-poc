@@ -1,4 +1,5 @@
 ---
 - name: Show prechange status
   nxos_config:
-    commands:
+    src: var/10.0.99.2_run
+    provider: "{{ cli }}"
