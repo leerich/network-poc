@@ -2,5 +2,5 @@
 cli:
   host: "{{ inventory_hostname }}"
   username: "{{ cisco_user }}"
-  password: "{{ cisco_pass }}"
+  password: "{{ cisco_password }}"
   transport: cli
