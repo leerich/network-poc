@@ -17,4 +17,4 @@
       - show run
       - show log
     provider: '{{ cli }}'
-    authorize: yes
+
