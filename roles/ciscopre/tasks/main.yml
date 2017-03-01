@@ -1,6 +1,6 @@
 ---
 - name: Show prechange status
-  ios_command:
+  nxos_command:
     commands:
       - show cdp neighbor
       - show ip interface brief
