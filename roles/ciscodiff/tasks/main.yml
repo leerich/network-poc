@@ -1,5 +1,5 @@
 ---
 - name: Show prechange status
   nxos_config:
-    src: vars/10.0.99.2_run.j2
+    src: /var/lib/awx/projects/10.0.99.2_run.j2
     provider: "{{ cli }}"
