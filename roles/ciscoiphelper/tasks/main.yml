@@ -1,0 +1,14 @@
+---
+- name: Show prechange status
+  nxos_config:
+    lines:
+      - no ip helper
+    provider: '{{ cli }}'
+
+
+- name: Show prechange status
+  nxos_config:
+    lines:
+      - ip helper '{{ ip_helper_1 }}'
+    provider: '{{ cli }}'
+
