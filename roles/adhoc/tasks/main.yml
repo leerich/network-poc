@@ -1,4 +1,5 @@
 - name: Run adhoc commands
+  hosts: all
   tasks:
    - ios_command:
         commands:  "{{ item }}"
