@@ -3,4 +3,5 @@
   tasks:
    - ios_command:
         commands:  "{{ item }}"
+        provider: "{{ provider }}"
      with_items: "{{ commands }}"
