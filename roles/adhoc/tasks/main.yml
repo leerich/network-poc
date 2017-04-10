@@ -1,5 +1,4 @@
 ---
-
 - name:  Run adhoc commands
   hosts: all
   tasks:
