@@ -1,2 +1,2 @@
 - name: include device specific tasks
-  include: "{{ device_os }}.yaml"
+  include: "{{ device_os }}.yml"
