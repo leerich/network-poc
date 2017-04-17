@@ -1,5 +1,5 @@
 --- 
-device_os: ios
+#device_os: ios
 provider: 
   host: "{{ inventory_hostname }}"
   transport: cli
