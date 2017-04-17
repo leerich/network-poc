@@ -1,0 +1,5 @@
+- name: Run adhoc commands
+  iosxr_command:
+    commands:  "{{ item }}"
+    provider: "{{ provider }}"
+  with_items: "{{ commands }}"
