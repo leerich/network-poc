@@ -1,1 +1,2 @@
-- src: yatesr.timezone
+- src: https://github.com/bennojoy/ntp.git
+  name: galaxy-test
